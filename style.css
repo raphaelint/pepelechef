@@ -82,6 +82,7 @@ footer {
         opacity: 0;
         transform: translateY(100%);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -94,7 +95,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: slideIn 1s ease-in-out; /* Use slideIn animation with 1 second duration */
+    animation: slideIn 1s ease-in-out;
+    /* Use slideIn animation with 1 second duration */
 }
 
 .about-text {
@@ -264,4 +266,54 @@ footer {
     /* height: auto; */
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styling for roadmap list items */
+.roadmap-item ul {
+    padding-left: 20px;
+    /* Add left padding to the list */
+}
+
+.roadmap-item ul li {
+    list-style-type: none;
+    /* Remove default bullet points */
+    position: relative;
+    /* Position for custom bullet */
+    padding-left: 30px;
+    /* Add padding for indentation */
+    margin-bottom: 10px;
+    /* Add spacing between list items */
+}
+
+/* Custom bullet style */
+.roadmap-item ul li:before {
+    content: "";
+    /* Empty content */
+    position: absolute;
+    /* Position the bullet */
+    left: 0;
+    /* Position relative to the left edge of the list item */
+    top: 6px;
+    /* Adjust vertical alignment */
+    width: 8px;
+    /* Set width of the bullet */
+    height: 8px;
+    /* Set height of the bullet */
+    background-color: #4c9540;
+    /* Set color of the bullet */
+    border-radius: 50%;
+    /* Shape the bullet as a circle */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .roadmap-item {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .roadmap-item {
+        flex: 0 0 100%;
+    }
 }
