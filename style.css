@@ -317,3 +317,31 @@ footer {
         flex: 0 0 100%;
     }
 }
+
+.token {
+    font-weight: bold;
+    /* font-size: 20px; */
+    color: #f5f8f4;
+    cursor: pointer;
+    /* text-decoration: underline; */
+    /* Add underline to indicate it's clickable */
+}
+
+.token:hover {
+    color: #607660;
+    /* Change color on hover for better visibility */
+}
+
+/* CSS for notification */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4c9540;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    /* Set a high z-index to ensure it appears above other elements */
+}

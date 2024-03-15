@@ -42,7 +42,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/pepelecheflogo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/pepelecheflogo.jpg" type="image/x-icon">
 </head>
 
 <body>
@@ -71,6 +71,7 @@
                     <img src="images/6.jpg" alt="PepeLeChef Image">
                 </div>
                 <div class="about-text">
+                    <p>Token : <span class="token">2MtpcP2NpriS3v8xYVHg1fYfcLbWHSD5KP73EGuyyMKo</span></p>
                     <p>In the bustling kitchens of the internet, Pepe the Frog grew weary of his existence as just a
                         meme. Yearning for greater culinary heights, he was struck by inspiration one night while
                         enduring a lackluster bowl of ramen. Shedding his fedora for a chef's hat, Pepe embarked on a
@@ -87,12 +88,12 @@
                     <p>Join us in our mission to create a decentralized and meme-powered ecosystem!</p>
                     <div class="button-container">
                         <a target="_blank"
-                            href="https://raydium.io/swap/?inputCurrency=sol&amp;outputCurrency=3yJBRZVYZaxgd4wNuArNX24r1UtHvHvxNLkmp4gUngY6&amp;fixed=in"
+                            href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=2MtpcP2NpriS3v8xYVHg1fYfcLbWHSD5KP73EGuyyMKo&outputSymbol=2MtpcP&fixed=in"
                             class="btn btn-primary btn-buy">
                             <i class="fas fa-shopping-cart"></i> Buy
                         </a>
                         <a target="_blank"
-                            href="https://dexscreener.com/solana/hvj4jijzmkppp9xwsvqlv79nhdipu1fzvwwm6rjs7hv3"
+                            href="https://dexscreener.com/solana/2MtpcP2NpriS3v8xYVHg1fYfcLbWHSD5KP73EGuyyMKo"
                             class="btn btn-secondary btn-chart">
                             <i class="fas fa-chart-line"></i> Chart
                         </a>
@@ -158,12 +159,12 @@
                 <div class="roadmap-item">
                     <h3>Phase 3: Serving the food</h3>
                     <p>
-                        <ul>
-                            <li>Buzz marketing</li>
-                            <li>1000 X followers</li>
-                            <li>100M Market cap</li>
-                            <li>Dexscreener update</li>
-                        </ul>
+                    <ul>
+                        <li>Buzz marketing</li>
+                        <li>1000 X followers</li>
+                        <li>100M Market cap</li>
+                        <li>Dexscreener update</li>
+                    </ul>
                     </p>
                 </div>
                 <!-- Add more roadmap items as needed -->
@@ -176,12 +177,12 @@
             <h2>Contact Us</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <a href="#"><img
+                    <a href="https://t.me/PepeLeChef"><img
                             src="https://static.wixstatic.com/media/1f3f2b_af942b4585dd4bf9baaa6e151c02f1b4~mv2.png/v1/fill/w_106,h_106,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/twttttee2.png"
-                            alt="twttttee2.png"
+                            alt="Telegram"
                             style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;" width="85"
                             height="85" fetchpriority="high"></a>
-                    <a href="#"><img
+                    <a href="https://twitter.com/pepelechef_"><img
                             src="https://static.wixstatic.com/media/1f3f2b_f59a557a4c72456581fa206a9247dcac~mv2.png/v1/fill/w_106,h_106,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/twtttt.png"
                             alt="twtttt.png"
                             style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;" width="85"
@@ -202,3 +203,39 @@
 </body>
 
 </html>
+
+<script>
+    // JavaScript to copy token when clicked
+    document.addEventListener('DOMContentLoaded', function () {
+        const tokenElement = document.querySelector('.token');
+
+        tokenElement.addEventListener('click', function () {
+            const tokenText = tokenElement.textContent.trim();
+            copyToClipboard(tokenText);
+            showNotification();
+        });
+
+        // Function to copy text to clipboard
+        function copyToClipboard(text) {
+            const textField = document.createElement('textarea');
+            textField.innerText = text;
+            document.body.appendChild(textField);
+            textField.select();
+            document.execCommand('copy');
+            textField.remove();
+        }
+
+        // Function to show notification
+        function showNotification() {
+            const notification = document.createElement('div');
+            notification.textContent = 'Token copied!';
+            notification.classList.add('notification');
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 2000); // Remove notification after 2 seconds
+        }
+    });
+
+</script>
