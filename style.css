@@ -360,7 +360,7 @@ footer {
 
 
 #airdrop {
-    padding: 50px 0;
+    padding: 25px 0;
     background-color: #4c9540; /* Green background color */
     text-align: center;
 }
@@ -368,7 +368,8 @@ footer {
 #airdrop h2 {
     font-size: 48px;
     font-weight: bold;
-    color: #150b0b; /* White text color */
+    color: #150b0b;
+    /* color: #150b0b; White text color */
     margin-bottom: 30px;
     text-transform: uppercase;
 }
@@ -418,18 +419,18 @@ footer {
 }
 
 .airdrop-info p {
-    font-size: 16px;
+    font-size: 13px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
 /* CSS for Countdown section */
 .countdown-container {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #countdown {
-    font-size: 24px;
+    font-size: 22px;
     color: #fff; /* White text color */
 }
 
