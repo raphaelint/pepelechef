@@ -54,6 +54,7 @@
             </h1>
             <nav>
                 <ul>
+                    <li><a href="#airdrop">Airdrop</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#tokenomics">Tokenomics</a></li>
                     <li><a href="#roadmap">Roadmap</a></li>
@@ -62,6 +63,37 @@
             </nav>
         </div>
     </header>
+
+    <section id="airdrop">
+        <div class="container">
+            <h2>Airdrop</h2>
+            <div class="countdown-container">
+                <div id="countdown" style="font-size: 1.5rem;"></div>
+            </div>
+            <div id="airdrop-form-container">
+                <form id="airdrop-form" action="/index/index/post.html" method="post" class="col-12 d-sm-block mx-auto"
+                    data-lpignore="true">
+                    <div class="form-group">
+                        <input type="hidden" name="sharecode" value="">
+                        <input name="address" class="form-control form-control-lg" type="text"
+                            placeholder="Your Solana address">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Participate</button>
+                    </div>
+                </form>
+                <div class="airdrop-info">
+                    <p>1. Copy and share your referral link, you and the invitee will be rewarded 100,000,000 PCHEF.
+                        Invite up to 20 people.</p>
+                    <p>2. Own a Solana (Mobile of the 117,497 Solana Mobile holders will receive 5% PCHEF tokens.)</p>
+                    <p>3. Connect your Twitter, follow <a href="https://twitter.com/pepelechef_" target="_blank">@pepelechef_</a>.
+                    </p>
+                    <p>4. Participate in PCHEF Giveaways on Twitter. (We're launching a series of PCHEF Giveaway
+                        activities with various communities. If you're an influencer, DM us on Twitter.)</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="about">
         <div class="container">
@@ -112,11 +144,15 @@
                 <div class="tokenomics-text">
                     <!-- <p>Here you can provide information about the tokenomics of your PepeLeChef, such as:</p> -->
                     <ul class="list-group custom-list">
+                        <li class="list-group-item btn btn-secondary">Token Name : PEPELECHEF</li>
+                        <li class="list-group-item btn btn-secondary">Symbol : PCHEF</li>
                         <li class="list-group-item btn btn-secondary">Total token supply : 1Bilion</li>
-                        <li class="list-group-item btn btn-secondary">Chain : SOLANA</li>
+                        <li class="list-group-item btn btn-secondary">Air drop : 100M</li>
+                        <li class="list-group-item btn btn-secondary">Fair Launch : 900M</li>
+                        <!-- <li class="list-group-item btn btn-secondary">Chain : SOLANA</li> -->
                         <li class="list-group-item btn btn-secondary">Tax : 0/0</li>
                         <li class="list-group-item btn btn-secondary">Liquidity : Burned</li>
-                        <li class="list-group-item btn btn-secondary">Ownership : Revoked</li>
+                        <!-- <li class="list-group-item btn btn-secondary">Ownership : Revoked</li> -->
 
                     </ul>
                 </div>
@@ -139,9 +175,9 @@
                     <p>
                     <ul>
                         <li>Website development</li>
-                        <li>Prelaunch marketing</li>
                         <li>Social media handles</li>
-                        <li>200 X followers</li>
+                        <li>Airdrop launching</li>
+                        <li>20k X followers</li>
                     </ul>
                     </p>
                 </div>
@@ -151,7 +187,7 @@
                     <ul>
                         <li>Token launch</li>
                         <li>Influencer marketing</li>
-                        <li>500 X followers</li>
+                        <li>50k X followers</li>
                         <li>10M Market cap</li>
                     </ul>
                     </p>
@@ -161,9 +197,9 @@
                     <p>
                     <ul>
                         <li>Buzz marketing</li>
-                        <li>1000 X followers</li>
+                        <li>100k X followers</li>
                         <li>100M Market cap</li>
-                        <li>Dexscreener update</li>
+                        <li>CMC/GC/CEX Listing</li>
                     </ul>
                     </p>
                 </div>
@@ -191,7 +227,6 @@
             </div>
         </div>
     </section>
-
 
     <footer>
         <div class="container">
@@ -237,5 +272,33 @@
             }, 2000); // Remove notification after 2 seconds
         }
     });
+
+    // Set the date to countdown to
+    const countdownDate = new Date('2024-03-21T23:59:59').getTime();
+
+    // Update the countdown every second
+    const countdown = setInterval(function () {
+        // Get the current date and time
+        const now = new Date().getTime();
+
+        // Calculate the remaining time
+        const distance = countdownDate - now;
+
+        // Calculate days, hours, minutes, and seconds
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the countdown
+        document.getElementById('countdown').innerHTML = `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+
+        // If the countdown is finished, display a message
+        if (distance < 0) {
+            clearInterval(countdown);
+            document.getElementById('countdown').innerHTML = 'Countdown expired';
+        }
+    }, 1000);
+
 
 </script>

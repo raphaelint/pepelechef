@@ -121,12 +121,14 @@ footer {
 /* Additional styles for the Tokenomics section */
 .tokenomics-content {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    animation: slideIn 1s ease-in-out;
 }
 
 .tokenomics-image {
     flex-shrink: 0;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .tokenomics-image img {
@@ -145,6 +147,7 @@ footer {
     font-weight: bold;
     font-size: 40px;
     padding: 10px;
+    /* padding-right: 100px; */
     margin-bottom: 10px;
 }
 
@@ -344,4 +347,103 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 9999;
     /* Set a high z-index to ensure it appears above other elements */
+}
+
+
+
+
+
+
+
+
+
+
+
+#airdrop {
+    padding: 50px 0;
+    background-color: #4c9540; /* Green background color */
+    text-align: center;
+}
+
+#airdrop h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #150b0b; /* White text color */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+#airdrop-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #150b0b; /* White text color */
+}
+
+#airdrop-form {
+    margin-bottom: 20px;
+}
+
+#airdrop-form input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#airdrop-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3a7d35;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#airdrop-form button:hover {
+    background-color: #091707;
+}
+
+.airdrop-info {
+    text-align: left;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.airdrop-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* CSS for Countdown section */
+.countdown-container {
+    margin-bottom: 30px;
+}
+
+#countdown {
+    font-size: 24px;
+    color: #fff; /* White text color */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .countdown-container {
+        padding: 0 20px;
+    }
+}
+
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    #airdrop-form-container {
+        padding: 0 20px;
+    }
 }
